@@ -1,0 +1,26 @@
+require "#{__dir__}/../lib/ffi_libarchive_preload/version"
+
+task :default do
+  puts "Compiling library"
+  `rm -rf #{__dir__}/build #{__dir__}/artifacts #{__dir__}/lib`
+  `mkdir -p #{__dir__}/build/artifacts lib`
+  `tar xzf #{__dir__}/libarchive-#{FfiLibarchivePreload::VERSION}.tar.gz -C #{__dir__}/build`
+  `cd #{__dir__}/build/libarchive-#{FfiLibarchivePreload::VERSION} &&
+    ./configure \
+    --prefix="#{__dir__}/build/artifacts" \
+    --libdir="#{__dir__}/lib" \
+    --disable-bsdtar \
+    --disable-bsdcat \
+    --disable-bsdcpio \
+    --without-bz2lib \
+    --without-libb2 \
+    --without-lz4 \
+    --without-zstd \
+    --without-mbedtls \
+    --without-openssl \
+    --without-xml2 \
+    --without-expat`
+  `cd #{__dir__}/build/libarchive-#{FfiLibarchivePreload::VERSION} && make`
+  `cd #{__dir__}/build/libarchive-#{FfiLibarchivePreload::VERSION} && make install`
+  puts "Done"
+end

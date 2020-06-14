@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+set -e
+gem build ffi_libarchive_preload.gemspec

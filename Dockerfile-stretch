@@ -1,0 +1,11 @@
+FROM ruby:2.6.6-stretch
+
+RUN apt-get update && apt-get -y upgrade && apt-get -y install build-essential
+RUN gem install bundler
+
+WORKDIR /ffi_libarchive_preload
+
+COPY . .
+
+RUN script/setup
+RUN script/test
