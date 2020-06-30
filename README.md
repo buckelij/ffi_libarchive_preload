@@ -4,7 +4,7 @@ To use, require this gem before ffi-libarchive:
 
 ```
 require "ffi_libarchive_preload"
-require "ffi_libarchive"
+require "ffi-libarchive"
 Archive::Reader.open_filename("some.tar.gz").each_entry {|e| puts e.pathname}
 ```
 
