@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ffi_libarchive_preload (3.4.3)
+    ffi_libarchive_preload (3.5.0)
       ffi (~> 1)
       rake (>= 10)
 
@@ -9,7 +9,7 @@ GEM
   remote: https://rubygems.org/
   specs:
     ffi (1.13.1)
-    ffi_libarchive (1.1.1)
+    ffi-libarchive (1.0.4)
       ffi (~> 1.0)
     minitest (5.14.1)
     rake (13.0.1)
@@ -18,10 +18,10 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.17)
-  ffi_libarchive (~> 1.1)
+  bundler (~> 2.1.2)
+  ffi-libarchive (~> 1.0)
   ffi_libarchive_preload!
   minitest (~> 5.0)
 
 BUNDLED WITH
-   1.17.2
+   2.1.2
