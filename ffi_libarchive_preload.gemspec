@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "rake", ">= 10"
   spec.add_dependency "ffi", "~> 1"
 
-  spec.add_development_dependency "bundler", "~> 2.1.2"
+  spec.add_development_dependency "bundler", "~> 2.2.10"
   spec.add_development_dependency "minitest", "~> 5.0"
   spec.add_development_dependency "ffi-libarchive", "~> 1.0"
 end
